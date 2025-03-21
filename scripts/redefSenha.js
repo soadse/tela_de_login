@@ -55,6 +55,7 @@ btnRedefinir.addEventListener('click', () => {
     }
     else {
         localStorage.setItem('senha', senha.value)
+        window.close('../pags/redefSenha.html')
         window.open('../index.html', '_self')
     }
 })
@@ -85,7 +86,3 @@ gerarSenha.addEventListener('click', () => {
     senha = senha.slice(0, 10)
     senhaGerada.innerHTML = senha.join('')
 });
-
-window.onbeforeunload = function() {
-    window.location.href = ''
-}

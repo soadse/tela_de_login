@@ -62,6 +62,7 @@ btnCadastrar.addEventListener('click', () => {
         localStorage.setItem('nome', nome.value);
         localStorage.setItem('eMail', eMail.value);
         localStorage.setItem('senha', senha.value);
+        window.close('../pags/cadastro.html')
         window.open('../index.html', '_self');
     }
 });
@@ -92,7 +93,3 @@ gerarSenha.addEventListener('click', () => {
     senha = senha.slice(0, 10)
     senhaGerada.innerHTML = senha.join('')
 })
-
-window.onbeforeunload = function() {
-    window.location.href = ''
-}
