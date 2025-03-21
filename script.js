@@ -42,9 +42,6 @@ btnEntrar.addEventListener('click', () => {
     } else if(eMail.value !== localStorage.getItem('eMail')){
         popover.style.display = 'flex'
         msgPopover.innerHTML = 'Usuário não cadastrado!'
-    } else if (senha.value === localStorage.getItem('senha')) {
-        popover.style.display = 'flex'
-        msgPopover.innerHTML = 'Senha Incorreta!'
     } else {
         if(eMail.value !== localStorage.getItem('eMail') || senha.value !== localStorage.getItem('senha')){
             popover.style.display = 'flex'
