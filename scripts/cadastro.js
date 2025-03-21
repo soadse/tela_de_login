@@ -92,3 +92,6 @@ gerarSenha.addEventListener('click', () => {
     senha = senha.slice(0, 10)
     senhaGerada.innerHTML = senha.join('')
 })
+
+history.pushState(null, '', window.location.href)
+window.onpopstate(null, '', window.location.href)

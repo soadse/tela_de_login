@@ -82,3 +82,5 @@ document.addEventListener('DOMContentLoaded', () => {
     verificar()
 })
 
+history.pushState(null, '', window.location.href)
+window.onpopstate(null, '', window.location.href)
