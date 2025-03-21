@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#112B1E">
+    <link rel="stylesheet" href="../style.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="../styles/globalPortrait.css" media="screen and (orientation: portrait)">
+    <script src="../scripts/redefSenha.js" defer></script>
+    <title>Gerador de Senha</title>
+</head>
+<body>
+    <div id="container">
+
+        <div id="head">
+            <h1 class="txt" id="bemVindo">Redefinir a senha</h1>
+        </div>
+
+        <div id="containerForm">
+            <div class="form">
+                <label for="senha">Nova senha <img id="mostrarSenha" src="../img/closed.png"></label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+            </div>
+            <div class="form">
+                <label for="confSenha">Confirmar Senha <img id="mostrarSenhaConf" src="../img/closed.png"></label>
+                <input type="password" id="confSenha" placeholder="Confirme sua senha">
+            </div>
+            <div class="formGerarSenha">
+                <p id="gerarSenha">Gerar senha aleatória</p>
+                <p id="senhaGerada"></p>
+            </div>
+        </div>
+
+        <div id="footer">
+            <button class="btn" id="btnRedefinir">Redefinir</button>
+        </div>
+
+    </div>
+
+    <div id="popover" style="display: none;">
+        <h1>Atenção</h1>
+        <p id="msgPopover"></p>
+        <button id="fecharPopover">Fechar</button>
+    </div>
+</body>
+</html>

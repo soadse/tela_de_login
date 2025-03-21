@@ -1,0 +1,138 @@
+#containerSair {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 20px;
+}
+#containerSair button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--fontVerde);
+    color: var(--fontVerde);
+}
+
+#container {
+    width: 80vw;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+#container #head {
+    text-align: center;
+}
+#container #head h1{
+    color: var(--fontVerde);
+}
+
+/* Bloco do formulario */
+#containerForm {
+    margin-top: 20px;
+}
+#containerForm .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+#containerForm .form label {
+    position: relative;
+    font-weight: bold;
+    color: var(--fontVerde);
+}
+#containerForm .form label img {
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+#containerForm .form input {
+    outline: none;
+    border: none;
+    height: 25px;
+    border-bottom: 1px solid var(--fontCinza);
+}
+#container #containerForm .formGerarSenha p {
+    text-align: end;
+    margin: 10px 0 -15px 0;
+    color: var(--fontCinza);
+}
+#container #containerForm .formGerarSenha #senhaGerada {
+    color: var(--fontVerde);
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+#containerForm .formCadastro p {
+    color: var(--fontCinza);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+#containerForm .formCadastro p strong {
+    color: var(--fontVerde);
+}
+
+#footer {
+    display: flex;
+    justify-content: end;
+}
+#footer .btn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid var(--fontCinza);
+    border-radius: 6px;
+    color: var(--fontVerde);
+    margin: 30px 0 5px 0;
+}
+#footer .btn:hover, #containerSair button:hover, #popover button:hover {
+    background-color: var(--fontVerde);
+    color: white;
+    transition: all .3s ease;
+}
+#footer .btn:not(:hover), #containerSair button:not(:hover), #popover button:not(:hover){
+    transition: all .3s ease;
+}
+
+#popover {
+    position: absolute;
+    width: 75vw;
+    height: 60vh;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 12px 12px 12px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px black;
+}
+#popover h1 {
+    position: absolute;
+    top: 0;
+    margin-top: 30px;
+}
+#popover p {
+    text-align: center;
+}
+#popover button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--fontCinza);
+}
+
+
+/* .esconde {
+    display: none;
+}
+.aparece {
+    display: block;
+} */
