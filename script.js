@@ -1,6 +1,5 @@
 let eMail = document.getElementById('eMail')
 let senha = document.getElementById('senha')
-let confSenha = document.getElementById('confSenha')
 let btnEntrar = document.getElementById('btnEntrar')
 let btnCadastrar = document.getElementById('btnCadastrar')
 let btnRedefinir = document.getElementById('btnRedefinir')
@@ -9,7 +8,6 @@ let popover = document.getElementById('popover')
 let msgPopover = document.getElementById('msgPopover')
 let fecharPopover = document.getElementById('fecharPopover')
 let mostrarSenha = document.getElementById('mostrarSenha')
-let mostrarSenhaConf = document.getElementById('mostrarSenhaConf')
 let click = 0;
 
 mostrarSenha.addEventListener('click', () => {
@@ -20,17 +18,6 @@ mostrarSenha.addEventListener('click', () => {
     } else if(click === 2) {
         senha.type = 'password'
         mostrarSenha.src = 'img/closed.png'
-        click = 0
-    }
-})
-mostrarSenhaConf.addEventListener('click', () => {
-    click++
-    if(click === 1) {
-        confSenha.type = 'text'
-        mostrarSenhaConf.src = 'img/open.png'
-    } else if(click === 2) {
-        confSenha.type = 'password'
-        mostrarSenhaConf.src = 'img/closed.png'
         click = 0
     }
 })
@@ -49,15 +36,15 @@ btnRedefinir.addEventListener('click', () => {
 })
 
 btnEntrar.addEventListener('click', () => {
-    if (eMail.value === '' || senha.value === '' || confSenha.value === '') {
+    if (eMail.value === '' || senha.value === '') {
         popover.style.display = 'flex'
         msgPopover.innerHTML = 'Campos vazios!'
     } else if(eMail.value !== localStorage.getItem('eMail')){
         popover.style.display = 'flex'
         msgPopover.innerHTML = 'Usuário não cadastrado!'
-    } else if (senha.value !== confSenha.value) {
+    } else if (senha.value === localStorage.getItem('senha')) {
         popover.style.display = 'flex'
-        msgPopover.innerHTML = 'As senhas não são iguais'
+        msgPopover.innerHTML = 'Senha Incorreta!'
     } else {
         if(eMail.value !== localStorage.getItem('eMail') || senha.value !== localStorage.getItem('senha')){
             popover.style.display = 'flex'
