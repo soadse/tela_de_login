@@ -62,8 +62,8 @@ btnCadastrar.addEventListener('click', () => {
         localStorage.setItem('nome', nome.value);
         localStorage.setItem('eMail', eMail.value);
         localStorage.setItem('senha', senha.value);
-        window.close('../pags/cadastro.html')
         window.open('../index.html', '_self');
+        window.close('../pags/cadastro.html')
     }
 });
 

@@ -55,8 +55,8 @@ btnRedefinir.addEventListener('click', () => {
     }
     else {
         localStorage.setItem('senha', senha.value)
-        window.close('../pags/redefSenha.html')
         window.open('../index.html', '_self')
+        window.close('../pags/redefSenha.html')
     }
 })
 

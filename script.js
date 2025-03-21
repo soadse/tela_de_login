@@ -63,8 +63,8 @@ btnEntrar.addEventListener('click', () => {
             popover.style.display = 'flex'
             msgPopover.innerHTML = 'E-mail ou senha inválidos!'
         } else {
-            window.close('index.html')
             window.open('pags/pagInicial.html', '_self')
+            window.close('index.html')
         }
     }
 });
